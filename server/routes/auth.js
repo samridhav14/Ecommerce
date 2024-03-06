@@ -25,6 +25,7 @@ appRouter.post('/api/signup',async (req, res) => {
     // we are sending status 200 because the request was successful
      res.json({user});
     }catch(err){
+        console.log(err);
         return res.status(500).json({error:"Something went wrong"});
     }
    

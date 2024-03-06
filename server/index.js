@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(appRouter);
 
 // if we dont specify anything with port it will run on localhost:3000
-app.listen(port, () => {
+app.listen(port,"0.0.0.0", () => {
     console.log(`Server is running on port ${port}`);
 });
 mongoose.connect(DB).then(() => {

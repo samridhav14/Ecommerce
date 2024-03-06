@@ -33,7 +33,6 @@ const userSchema = new mongoose.Schema({
                 return value.match(re);
             }
         } 
-            
     },
     address:{
         type:String,

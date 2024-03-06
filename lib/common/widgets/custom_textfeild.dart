@@ -25,9 +25,9 @@ class CustomTextfeild extends StatelessWidget {
       ),
       keyboardType: TextInputType.emailAddress,
       validator: (value) {
-        if (value!.isEmpty) {
-          return 'Please enter your email';
-        }
+       if(value==null || value.isEmpty){
+         return 'Please enter a valid $labelText';
+       }
         return null;
       },
     );
