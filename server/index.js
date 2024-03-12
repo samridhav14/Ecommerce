@@ -20,6 +20,7 @@ app.listen(port,"0.0.0.0", () => {
     console.log(`Server is running on port ${port}`);
 });
 mongoose.connect(DB).then(() => {
+    process.env.JWT_SECRET
     console.log('Database connected');
 }).catch((err) => {
     console.log(err);
@@ -27,6 +28,6 @@ mongoose.connect(DB).then(() => {
 // create read update delete - CRUD
 // req will contain what the user is sending to the server
 // res will contain what the server is sending back to the user
-app.get('/', (req, res) => {
-    res.json({'name':'Samridha'});
-});
+// app.get('/', (req, res) => {
+//     res.json({'name':'Samridha'});
+// });
